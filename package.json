@@ -1,0 +1,14 @@
+{
+  "name": "projeto-final",
+  "version": "1.0.0",
+  "description": "Sistema completo de tarefas com front-end, back-end e persistência JSON",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

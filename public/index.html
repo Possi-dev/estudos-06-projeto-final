@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas Full-Stack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tarefas Full-Stack</h1>
+        <p>Front + Back + Persistência</p>
+    </header>
+
+    <main>
+        <form id="todo-form">
+            <input type="text" id="todo-input" placeholder="Nova tarefa..." required>
+            <button type="submit">Adicionar</button>
+        </form>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Todas</button>
+            <button class="filter-btn" data-filter="pending">Pendentes</button>
+            <button class="filter-btn" data-filter="done">Concluídas</button>
+        </div>
+
+        <ul id="todo-list"></ul>
+
+        <div id="stats"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
