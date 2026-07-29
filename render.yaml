@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: projeto-final-tarefas
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+    plan: free
