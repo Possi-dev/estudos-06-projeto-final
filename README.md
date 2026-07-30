@@ -4,8 +4,8 @@ Meu projeto final do roadmap: aplicação completa com front-end, back-end e per
 
 ## 🔗 Demo ao vivo
 
-**[https://projeto-final-tarefas.onrender.com](https://projeto-final-tarefas.onrender.com)**  
-*(Primeiro acesso demora ~30s — o Render "acorda" o container grátis)*
+**Railway (produção completa):** https://projeto-final-fullstack-production.up.railway.app  
+**Vercel (versão anterior):** https://06-projeto-final.vercel.app
 
 ## Stack
 
@@ -14,7 +14,7 @@ Meu projeto final do roadmap: aplicação completa com front-end, back-end e per
 | Front | HTML5, CSS3, JavaScript (fetch API) |
 | Back | Node.js, Express.js |
 | DB | JSON file (persistência simples) |
-| Deploy | Render (grátis) |
+| Deploy | Railway (grátis) |
 
 ## Funcionalidades
 
@@ -36,16 +36,13 @@ npm start
 # Abre http://localhost:3000
 ```
 
-## Deploy no Render (grátis, 2 min)
+## Deploy no Railway (grátis, 2 min)
 
 1. Faça fork deste repo no seu GitHub
-2. Acesse [render.com](https://render.com) → New → Web Service
+2. Acesse [railway.app](https://railway.app) → New → Deploy from GitHub repo
 3. Conecte seu GitHub → selecione o repo
-4. Config:
-   - **Build Command:** `npm install`
-   - **Start Command:** `npm start`
-   - **Plan:** Free
-5. Create Web Service → aguarde build
+4. Railway detecta `railway.json` e `nixpacks` automaticamente
+5. Deploy automático → URL gerada
 
 ## Estrutura
 
@@ -53,6 +50,7 @@ npm start
 06-projeto-final/
 ├── server.js          # Back-end (API + serve static)
 ├── package.json
+├── railway.json       # Config Railway
 ├── public/
 │   ├── index.html     # Front-end
 │   ├── style.css
@@ -60,10 +58,20 @@ npm start
 └── tarefas.json       # Criado automaticamente
 ```
 
+## Endpoints da API
+
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| GET | `/api/tarefas` | Lista todas |
+| POST | `/api/tarefas` | Cria nova |
+| PUT | `/api/tarefas/:id` | Atualiza completa |
+| PATCH | `/api/tarefas/:id/toggle` | Alterna concluída |
+| DELETE | `/api/tarefas/:id` | Exclui |
+
 ## O que aprendi
 
-- API REST completa (GET, POST, PUT, PATCH, DELETE)
+- Criar API REST com Express
 - Servir arquivos estáticos no Express
 - Comunicação front ↔ back via fetch
 - Persistência simples com JSON
-- Deploy gratuito no Render
+- Deploy gratuito no Railway
