@@ -3,7 +3,7 @@ const path = require('path');
 const express = require('express');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const DB_FILE = path.join(__dirname, 'tarefas.json');
 
 app.use(express.json());
@@ -62,7 +62,7 @@ app.delete('/api/tarefas/:id', (req, res) => {
 });
 
 if (require.main === module) {
-    app.listen(PORT, () => console.log(`Servidor rodando em http://localhost:${PORT}`));
+    app.listen(PORT, '0.0.0.0', () => console.log(`Servidor rodando em http://localhost:${PORT}`));
 }
 
 module.exports = app;
