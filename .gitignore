@@ -2,3 +2,4 @@ node_modules/
 tarefas.db
 tarefas.json
 .env
+.vercel

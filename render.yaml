@@ -1,9 +1,10 @@
 services:
   - type: web
-    name: projeto-final-tarefas
+    name: projeto-final-fullstack
     runtime: node
     buildCommand: npm install
     startCommand: npm start
+    healthCheckPath: /
     envVars:
       - key: NODE_VERSION
         value: 20
